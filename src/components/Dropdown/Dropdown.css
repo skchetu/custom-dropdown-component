@@ -1,0 +1,81 @@
+/* Container */
+.dropdown {
+  user-select: none;
+  margin: 100px auto;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  color: #323232;
+  font-size: 16px;
+}
+
+.dropdown .dropdown-label {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #7d8998;
+
+}
+
+/* Dropdown button */
+.dropdown .dropdown-btn {
+  padding: 15px 20px;
+  border: 2px solid #7d8998;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.dropdown .dropdown-btn.open {
+  border: 2px solid #3873cb; /* Replace with your desired color */
+}
+
+/* Dropdown display text */
+.dropdown .dropdown-btn .dropdown-text{
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Placeholder text */
+.dropdown .dropdown-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+/* Menu content */
+.dropdown .dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: normal;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto; 
+}
+
+/* Menu options */
+.dropdown .dropdown-content .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  vertical-align: center;
+  display: flex;
+  gap: 10px;
+  line-height: 20px;
+}
+
+/* Menu options hover and selected styles */
+.dropdown .dropdown-content .dropdown-item:hover, .selected-option {
+  background: #eef4fa;
+}
+
+/* Checkbox styles */
+.dropdown .dropdown-content .dropdown-item input[type="checkbox"] {
+  height: 20px;
+}
