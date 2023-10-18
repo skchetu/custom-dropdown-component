@@ -57,6 +57,12 @@ function MySingleSelectComponent() {
 export default MySingleSelectComponent;
 ```
 
+#### Demo
+
+https://github.com/skchetu/custom-dropdown-component/assets/35510454/62947748-9038-4f9e-9e16-6d343bca00fe
+
+https://github.com/skchetu/custom-dropdown-component/assets/35510454/b15e4a2f-ebea-4a12-934e-2478f0679a13
+
 ### Multi Select
 
 Use the `Dropdown` component to create a multi-select dropdown.
@@ -87,6 +93,10 @@ function MyMultiSelectComponent() {
 
 export default MyMultiSelectComponent;
 ```
+
+#### Demo
+
+https://github.com/skchetu/custom-dropdown-component/assets/35510454/25fac274-d5fe-4bbb-bd56-acc4fe3bc110
 
 ## Notes
 
