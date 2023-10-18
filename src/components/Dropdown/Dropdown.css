@@ -1,7 +1,7 @@
 /* Container */
 .dropdown {
   user-select: none;
-  margin: 100px auto;
+  margin: 10px auto;
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -55,8 +55,11 @@
   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
   font-weight: normal;
   width: 100%;
-  max-height: 100vh;
+
+  /* Setting a max-height before scrolling is added, this can be changed by application's requirements */
+  max-height: 450px; 
   overflow-y: auto; 
+  z-index: 1;
 }
 
 /* Menu options */

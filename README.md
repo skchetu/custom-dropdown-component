@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# Custom Dropdown Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+A customizable and reusable dropdown component for React applications that supports both single-select and multi-select options.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [API](#api)
+- [Usage](#usage)
+  - [Single Select](#single-select)
+  - [Multi Select](#multi-select)
+- [Notes](#notes)
+- [How to Run](#how-to-run)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `Dropdown` component accepts the following properties:
 
-### `npm test`
+| Property        | Type             | Description                                 | Required |
+| --------------- | ---------------- | ------------------------------------------- | -------- |
+| selectedOptions | array of strings | Currently selected options                  | Yes      |
+| onChange        | function         | Callback function when selection changes    | No       |
+| options         | array of strings | Available options to choose from            | Yes      |
+| placeholder     | string           | Placeholder text when no option is selected | No       |
+| multiselect     | bool             | Enables multi-select mode                   | No       |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+### Single Select
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use the `Dropdown` component to create a single-select dropdown.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```jsx
+import React, { useState } from 'react';
+import Dropdown from './Dropdown';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+function MySingleSelectComponent() {
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
-### `npm run eject`
+  const options = ['Option 1', 'Option 2', 'Option 3'];
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  return (
+    <div>
+      <h2>Single Select Dropdown Example</h2>
+      <Dropdown
+        selectedOptions={selectedOptions}
+        onChange={(selected) => setSelectedOptions(selected)}
+        options={options}
+        placeholder="Select an option..."
+        label="Select:"
+      />
+    </div>
+  );
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+export default MySingleSelectComponent;
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Multi Select
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Use the `Dropdown` component to create a multi-select dropdown.
 
-## Learn More
+```jsx
+import React, { useState } from 'react';
+import Dropdown from './Dropdown';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function MyMultiSelectComponent() {
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  const options = ['Option A', 'Option B', 'Option C'];
 
-### Code Splitting
+  return (
+    <div>
+      <h2>Multi Select Dropdown Example</h2>
+      <Dropdown
+        selectedOptions={selectedOptions}
+        onChange={(selected) => setSelectedOptions(selected)}
+        options={options}
+        placeholder="Select multiple options..."
+        label="Select:"
+        multiselect
+      />
+    </div>
+  );
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+export default MyMultiSelectComponent;
+```
 
-### Analyzing the Bundle Size
+## Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- For better type checking, types and interfaces can be implemented to help with validating inputs and states
+- The `selectedOptions` and `options` are set to take only array of strings. However, in a true reusuable component array of objects will most likely be input to the component. For simplicity, only arrays of strings can be used in this component.
+- You can customize the styling of the `Dropdown` component by modifying the associated CSS.
+  - Since this is aiming to be a reusable component, more styling properties can be made avaiable for further customization
+- For more advanced configurations, consider adding ARIA attributes for accessibility.
 
-### Making a Progressive Web App
+## How to Run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To run this React project for a very simple demo, follow these steps:
 
-### Advanced Configuration
+1. Clone the repository to your local machine:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```
+   git clone https://github.com/skchetu/custom-dropdown-component.git
+   ```
 
-### Deployment
+2. Change your working directory to the project folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```
+   cd custom-dropdown-component
+   ```
 
-### `npm run build` fails to minify
+3. Install project dependencies using npm:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```
+   npm start
+   ```
+
+The application should open in your default web browser. If not, you can access it at [http://localhost:3000](http://localhost:3000).
+
+Now, you can interact with the single-select and multi-select dropdown components.

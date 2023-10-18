@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -10,4 +10,43 @@
 
 .App .Container{
   width: 400px;
+} */
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
+
+.App-header {
+  padding: 20px;
+}
+
+.component-display {
+  width: 400px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+section {
+  margin: 20px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+section {
+  margin: 100px 20px;
+}
+
+
