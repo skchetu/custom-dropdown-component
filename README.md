@@ -98,13 +98,14 @@ export default MyMultiSelectComponent;
 
 https://github.com/skchetu/custom-dropdown-component/assets/35510454/25fac274-d5fe-4bbb-bd56-acc4fe3bc110
 
-## Notes
+## Notes/ Improvements
 
 - For better type checking, types and interfaces can be implemented to help with validating inputs and states
 - The `selectedOptions` and `options` are set to take only array of strings. However, in a true reusuable component, an array of objects will most likely be provided to the component. For simplicity, only an arrays of strings can be used in this component.
 - You can customize the styling of the `Dropdown` component by modifying the associated CSS.
   - Since this is aiming to be a reusable component, more styling properties can be made available for further customization.
 - For more advanced configurations, adding ARIA attributes can be considered for accessibility.
+- All colors and styling can be moved to a proper constants folder.
 
 ## How to Run
 
