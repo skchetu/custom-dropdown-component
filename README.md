@@ -101,10 +101,10 @@ https://github.com/skchetu/custom-dropdown-component/assets/35510454/25fac274-d5
 ## Notes
 
 - For better type checking, types and interfaces can be implemented to help with validating inputs and states
-- The `selectedOptions` and `options` are set to take only array of strings. However, in a true reusuable component array of objects will most likely be input to the component. For simplicity, only arrays of strings can be used in this component.
+- The `selectedOptions` and `options` are set to take only array of strings. However, in a true reusuable component, an array of objects will most likely be provided to the component. For simplicity, only an arrays of strings can be used in this component.
 - You can customize the styling of the `Dropdown` component by modifying the associated CSS.
-  - Since this is aiming to be a reusable component, more styling properties can be made avaiable for further customization
-- For more advanced configurations, consider adding ARIA attributes for accessibility.
+  - Since this is aiming to be a reusable component, more styling properties can be made available for further customization.
+- For more advanced configurations, adding ARIA attributes can be considered for accessibility.
 
 ## How to Run
 
